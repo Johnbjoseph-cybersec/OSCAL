@@ -1,0 +1,99 @@
+{
+  "assessment-results": {
+    "uuid": "6c3f1a2e-58b4-4d0a-9f6e-0d2b7c1e4a10",
+    "metadata": {
+      "title": "Invalid: a risk log entry references a response that the risk does not define",
+      "last-modified": "2026-01-01T00:00:00Z",
+      "version": "1",
+      "oscal-version": "1.2.3"
+    },
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "results": [
+      {
+        "uuid": "b1a9d5c4-2e7f-4c3b-8a61-5f0e9d3c7b22",
+        "title": "Result",
+        "description": "A set of results.",
+        "start": "2026-01-01T00:00:00Z",
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "include-all": {}
+            }
+          ]
+        },
+        "observations": [
+          {
+            "uuid": "0e4d7b9a-3c21-4f58-b6a7-9c8e1d2f3a44",
+            "description": "An observation.",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-01-01T00:00:00Z"
+          }
+        ],
+        "risks": [
+          {
+            "uuid": "3f2e1d0c-9b8a-4c7d-9e6f-5a4b3c2d1e99",
+            "title": "Risk",
+            "description": "A risk.",
+            "statement": "A risk statement.",
+            "status": "open",
+            "remediations": [
+              {
+                "uuid": "8d7c6b5a-4f3e-4d2c-8b1a-0f9e8d7c6b55",
+                "lifecycle": "planned",
+                "title": "Remediation",
+                "description": "A planned remediation."
+              }
+            ],
+            "risk-log": {
+              "entries": [
+                {
+                  "uuid": "4b3a2c1d-0e9f-4a8b-9c7d-6e5f4a3b2c77",
+                  "title": "Status update",
+                  "start": "2026-01-01T00:00:00Z",
+                  "related-responses": [
+                    {
+                      "response-uuid": "00000000-0000-4000-8000-000000000000"
+                    }
+                  ]
+                }
+              ]
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "0e4d7b9a-3c21-4f58-b6a7-9c8e1d2f3a44"
+              }
+            ]
+          }
+        ],
+        "findings": [
+          {
+            "uuid": "d7c2e8f1-6a35-4b90-8d14-2a7b3c9e5f66",
+            "title": "Finding",
+            "description": "A finding.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6.1_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "0e4d7b9a-3c21-4f58-b6a7-9c8e1d2f3a44"
+              }
+            ],
+            "related-risks": [
+              {
+                "risk-uuid": "3f2e1d0c-9b8a-4c7d-9e6f-5a4b3c2d1e99"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

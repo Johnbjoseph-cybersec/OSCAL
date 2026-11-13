@@ -1343,6 +1343,17 @@
             <enum value="priority">A numeric value indicating the sequence in which risks should be addressed. (Lower numbers are higher priority)</enum>
          </allowed-values>
          <matches id="oscal-risk-priority-datatype" target="prop[has-oscal-namespace('http://csrc.nist.gov/ns/oscal') and @name='priority']/@value" datatype="integer" />
+         <!-- References from the risk log to this risk's responses (usnistgov/OSCAL#2296).
+           These checks are scoped to the containing risk, so they apply to both assessment results and POA&Ms. -->
+         <is-unique id="oscal-unique-risk-response" target="response">
+            <key-field target="@uuid"/>
+            <remarks>
+               <p>Since multiple <code>response</code> entries can be provided, each response must have a unique <code>uuid</code>.</p>
+            </remarks>
+         </is-unique>
+         <expect id="oscal-risk-log-related-response-defined" target="risk-log/entry/related-response" test="@response-uuid = ../../../response/@uuid">
+            <message>The related response '{ @response-uuid }' must reference a response defined in the same risk.</message>
+         </expect>
       </constraint>
    </define-assembly>
 

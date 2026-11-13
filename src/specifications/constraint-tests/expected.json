@@ -1,0 +1,22 @@
+{
+  "assessment-results/valid-single-result.json": [],
+  "assessment-results/valid-cross-result-reference.json": [],
+  "assessment-results/invalid-finding-missing-observation.json": [
+    "oscal-ar-related-observation-index"
+  ],
+  "assessment-results/invalid-risk-missing-observation.json": [
+    "oscal-ar-related-observation-index"
+  ],
+  "assessment-results/invalid-finding-missing-risk.json": [
+    "oscal-ar-associated-risk-index"
+  ],
+  "assessment-results/invalid-duplicate-observation-uuid.json": [
+    "oscal-ar-observation-uuid-index"
+  ],
+  "assessment-results/invalid-duplicate-risk-uuid.json": [
+    "oscal-ar-risk-uuid-index"
+  ],
+  "assessment-results/invalid-risk-log-missing-response.json": [
+    "oscal-risk-log-related-response-defined"
+  ]
+}
